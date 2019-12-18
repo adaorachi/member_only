@@ -6,7 +6,7 @@
   author of a post is but, outside they can only 
   see the story and wonder who wrote it. </p>
   <hr class="my-4">
-  <%= link_to "Go to blog", "#", class: "btn btn-primary btn-lg" %>
+  <%= link_to "Go to blog", "/posts", class: "btn btn-primary btn-lg" %>
   <% if logged_in? %>
     <%= link_to "Log Out", "/logout", class: "btn btn-danger btn-lg", method: :delete %>
   <% else %>
