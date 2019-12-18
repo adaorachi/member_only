@@ -2,7 +2,6 @@
   <h1 class="display-5 text-center">SignUp</h1>
 
   <%= form_for(@user) do |f| %>
-    
     <% if @user.errors.any? %>
     <div class="alert alert-danger">
     <p>The form has the following <%= pluralize(@user.errors.count, 'error')%>:</p>
