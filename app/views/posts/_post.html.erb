@@ -1,0 +1,15 @@
+<div class="card my-5">
+  <h5 class="card-header">By <%= post.user.username %></h5>
+  <div class="card-body">
+    <div class="image">
+      <%= gravatar_for(post.user, size: 60)%>
+    </div>
+
+    <div class="info">
+      <p class="card-text"><%= post.body %></p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <small class="card-text">Posted <%= time_ago_in_words(post.created_at) %> ago </small>
+  </div>
+</div>

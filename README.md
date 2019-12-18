@@ -86,7 +86,7 @@ Run the app in a local server:
 your@pc:~$ rails server
 ```
 
-Then, go to [http://localhost:3000/users/new](http://localhost:3000/users/new)
+Then, go to [http://localhost:3000](http://localhost:3000)
 
 <!-- LICENSE -->
 ## License

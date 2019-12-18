@@ -1,40 +1,5 @@
 <div class="form_container my-4">
   <h1 class="display-5 text-center">SignUp</h1>
-
-  <%= form_for(@user) do |f| %>
-    <% if @user.errors.any? %>
-    <div class="alert alert-danger">
-    <p>The form has the following <%= pluralize(@user.errors.count, 'error')%>:</p>
-      <ul>
-        <% @user.errors.full_messages.each do |error| %>
-          <li>
-            <%= error %>
-          </li>
-        <% end %>
-      </ul>
-      </div>
-    <% end %>
-    
-    <div class="form-group">
-      <%= f.label :name %>
-      <%= f.text_field :name, class: "form-control"%>
-    </div>
-    <div class="form-group">
-      <%= f.label :username %>
-      <%= f.text_field :username, class: "form-control"%>
-    </div>
-    <div class="form-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, class: "form-control"%>
-    </div>
-    <div class="form-group">
-      <%= f.label :password %>
-      <%= f.password_field :password, class: "form-control"%>
-    </div>
-    <div class="form-group">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, class: "form-control"%>
-    </div>
-    <%= f.submit "Be a member", class: "btn btn-primary" %>
-  <% end %>
+  <%= provide(:button_text, "Be a member")%>
+  <%= render 'form' %>
 </div>
