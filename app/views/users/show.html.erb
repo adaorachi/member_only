@@ -1,0 +1,10 @@
+<h1 class="my-4 display-5">This is the profile page of <%= @user.name %></h1>
+
+<div class="card">
+  <div class="card-header">
+    @<%= @user.username %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= gravatar_for @user %> <%= @user.email %></h5>
+  </div>
+</div>

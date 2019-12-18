@@ -1,0 +1,17 @@
+<div class="form_container my-4">
+  <h1 class="display-5 text-center">Log in</h1>
+
+  <%= form_for(:session, url: login_path) do |f| %>
+    
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "form-control"%>
+    </div>
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control"%>
+    </div>
+
+    <%= f.submit "Log in", class: "btn btn-primary" %>
+  <% end %>
+</div>
