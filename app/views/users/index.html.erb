@@ -1,0 +1,19 @@
+<h1 class="text-center display-5 my-4">All members<h1>
+<% @users.each do |user| %>
+<div class="card my-5">
+  <h5 class="card-header"><%= user.name %><small>  (@<%= user.username %></small>)</h5>
+  <div class="card-body">
+    <div class="image">
+      <%= gravatar_for(user, size: 60)%>
+    </div>
+    <div class="info">
+      <p class="card-text"><%= user.email %></p>
+      <p class="card-text">Written 1 posts</p>
+      <p class="card-text">Member since <%= user.created_at.to_date %></p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <%= link_to "View Profile", user_path(user), class: "btn btn-primary" %>
+  </div>
+</div>
+<% end %>

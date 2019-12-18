@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    @users = User.all
   end
 
   def new
@@ -9,12 +10,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Welcome"
+      create_session(@user)
+      create_cookies(@user)
+      flash["alert-success"] = 'Welcome! You are now a member'
       redirect_to user_path(@user)
     else
       render 'new'
     end
-
   end
 
   def show
@@ -22,7 +24,8 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
-    params.required(:user).permit(:name,:username,:email,:password,:password_confirmation)
+    params.required(:user).permit(:name, :username, :email, :password, :password_confirmation)
   end
 end

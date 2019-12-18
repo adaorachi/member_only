@@ -11,18 +11,37 @@
 
   <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">ClubHouse</a>
-  
+   <%= link_to "ClubHouse", root_path, class: "navbar-brand" %> 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Home", root_path, class: "nav-link"%> 
+        <%= link_to "Home", root_path, class: "nav-link" %> 
       </li>
-  </div>
-</nav>
+      <li class="nav-item active">
+        <%= link_to "Members", users_path, class: "nav-link" %> 
+      </li>
+            
+      <% if logged_in? %>
+        <li class="nav-item active">
+          <%= link_to "Profile", user_path(current_user), class: "nav-link" %> 
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Logout", logout_path, class: "nav-link", method: :delete %> 
+        </li>
+        <% else %>
+        <li class="nav-item active">
+          <%= link_to "Login", login_path, class: "nav-link" %> 
+        </li>
+        <% end %>
+      </div>
+    </nav>
+  
     <div class="container">
-    <%= yield %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: "alert #{name}"%>
+    <% end %>
+      <%= yield %>
     </div>
   </body>
 </html>
