@@ -24,7 +24,7 @@
 <% @posts.each do |post| %>
 <div class="card my-5">
   <% if logged_in? %>
-    <h5 class="card-header">By <%= post.user.username %></h5>
+    <h6 class="card-header"><%= link_to post.user.username, user_path(post.user) %></h6>
   <% end %>
   <div class="card-body">
   <% if logged_in? %>

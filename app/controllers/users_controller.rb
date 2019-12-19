@@ -31,11 +31,4 @@ class UsersController < ApplicationController
   def user_params
     params.required(:user).permit(:name, :username, :email, :password, :password_confirmation)
   end
-
-  def logged_in_user
-    unless logged_in?
-      flash['alert-danger'] = 'You must be logged in to access that page!'
-      redirect_to login_path
-    end
-  end
 end

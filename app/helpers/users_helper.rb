@@ -6,6 +6,10 @@ module UsersHelper
   end
 
   def user_post_count(user)
-    user.count
+    if user.count.zero?
+      p 'No post written'
+    elsif user.count.positive?
+      p "Post written: #{pluralize(user.count, 'post')}"
+    end
   end
 end

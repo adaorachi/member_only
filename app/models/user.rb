@@ -15,9 +15,7 @@ class User < ApplicationRecord
   has_secure_password
 
   def self.hash_string(string)
-    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-                                                  BCrypt::Engine.cost
-    BCrypt::Password.create(string, cost: cost)
+    Digest::SHA1.hexdigest(string)
   end
 
   def self.new_token
@@ -30,6 +28,7 @@ class User < ApplicationRecord
   end
 
   def authenticate?(remember_token)
+    return false if remember_digest.nil?
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
 
