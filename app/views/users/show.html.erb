@@ -1,0 +1,20 @@
+<h1 class="my-4 display-5 text-center"><%= @user.name %>'s Profile Page</h1>
+
+<div class="profile_body">
+  <div class="card">
+  <div class="card-body">
+    <div class="image">
+       <%= link_to gravatar_for(@user, size: 60), user_path(@user) %>
+    </div>
+    <div class="info">
+      <p class="card-text"><%= link_to @user.username, user_path(@user) %></p>
+      <p class="card-text"><%= @user.email %></p>
+      <p class="card-text"><%= pluralize(@user.posts.count, 'post') %> written</p>
+    </div>
+    </div>
+  </div>
+
+  <h1 class="text-center my-3">Posts</h1>
+  <%= render @posts %>
+
+

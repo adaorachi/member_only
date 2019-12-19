@@ -1,0 +1,26 @@
+h1 {
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  font-weight: bolder;
+}
+
+.form_container {
+  width: 60%;
+  margin: 20px auto;
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+
+  .info {
+    margin-left: 20px;
+
+    p {
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+  }
+}
