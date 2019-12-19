@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-# member_only
-This project is based on working with rails authentication system
-=======
-<!--
-*** Thanks for checking out this README Template. 
--->
-
 
 <!-- PROJECT TITLE -->
 
-<br />
 <h1 align="center">Members Only</h1>
 
 
@@ -20,7 +11,8 @@ This project is based on working with rails authentication system
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Built With](#built-with)
+* [Live Preview](#live-preview)
+* [Built With](#built-with)
 * [Required Installations](#required-installations)
 * [Instalation of This App](#instalation)
 * [License](#license)
@@ -35,8 +27,14 @@ In this project, you’ll be building an exclusive clubhouse where your members 
 
 Full task description: <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication"> Odin Project.</a>
 
+## Live Preview
 
-### Built With 
+This is the link to the live preview in Heroku. Feel free to visit.<br>
+<a href="https://fierce-meadow-63742.herokuapp.com/">Members-Only ClubHouse</a> <br>
+<p>Below is the HomePage Screenshot</p>
+<img src="app/assets/images/screen1.png" alt="HomePage">
+
+## Built With 
 
 * Git
 * Ruby
@@ -106,4 +104,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Acknowledgements
 
 * <a href="https://www.microverse.org/"> Microverse</a>  and <a href="https://www.theodinproject.com/"> Odin Project</a> .
->>>>>>> origin
