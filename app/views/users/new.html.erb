@@ -1,0 +1,9 @@
+<div class="form_container my-4">
+  <h1 class="display-5 text-center">SignUp</h1>
+  <%= provide(:button_text, "Be a member")%>
+  <%= render 'form' %>
+
+  <p class="mt-4">
+    <small class="my-4">Already a member? <%= link_to "Log In here", login_path %></small>
+  </p>
+</div>
